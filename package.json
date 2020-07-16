@@ -5,7 +5,6 @@
   "main": "./server.js",
   "bin": "./lib/cli/bin.js",
   "scripts": {
-    "test": "mocha ./test/test.js --exit",
     "test": "npm run build && cross-env NODE_ENV=test jest && npm run lint",
     "start": "babel-node -- src/cli/bin db.json -r routes.json",
     "lint": "eslint . --ignore-path .gitignore",
