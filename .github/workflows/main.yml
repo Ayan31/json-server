@@ -30,9 +30,9 @@ jobs:
       run: |
         cd  $GITHUB_WORKSPACE
         npm install -g json-server
-        node server.js
         export PATH=$PATH:/$HOME/.npm-global/bin
-        json-server db.json --routes routes.json &
+        json-server --watch db.json --routes routes.json &
+        node server.js
         npm i mocha supertest --save-dev
         npm test
     env:
