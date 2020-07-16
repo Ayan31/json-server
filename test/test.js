@@ -1,5 +1,5 @@
 const request = require("supertest");
-    const app = require("../server.js");
+    const app = require("../index.js");
 
     describe("GET /posts/1", () => {
       it("respond with posts1(JSON)", (done) => {
