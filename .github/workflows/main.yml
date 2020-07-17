@@ -29,6 +29,8 @@ jobs:
     - name: Install and Run JSON Server
       run: |
         cd  $GITHUB_WORKSPACE
+        json-server --watch db.json . &
+        curl  http://localhost:3000/posts/1
         npm i mocha supertest --save-dev
         npm test
     env:
