@@ -29,7 +29,7 @@ jobs:
     - name: Install and Run JSON Server
       run: |
         cd  $GITHUB_WORKSPACE
-        #npm install -g json-server
+        npm install json-server --save-dev
         #export PATH=$PATH:/$HOME/.npm-global/bin
         #json-server --watch db.json --routes routes.json &
         #node server.js
